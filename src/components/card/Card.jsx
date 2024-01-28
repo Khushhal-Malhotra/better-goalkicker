@@ -1,19 +1,17 @@
-import React, { useState } from "react";
-import { easeInOut, motion } from "framer-motion";
+import React from "react";
 
 const Card = (props) => {
-  console.log(props.item);
   return (
-    <motion.div
-      whileHover={{ scale: 1.1 }}
-      transition={{duration:0.3}}
-      className="card w-80 bg-base-100 shadow-xl "
+    <div
+      className="card  w-80 bg-base-100 shadow-xl transition ease-in-out duration-300 
+      md:hover:scale-110 "
     >
       <figure className="px-10 pt-10">
         <img
           src={props.item.imgUrl}
           alt={props.item.imgAlt}
           className="rounded-xl"
+          loading="lazy"
         />
       </figure>
       <div className="card-body items-center text-center">
@@ -29,7 +27,7 @@ const Card = (props) => {
           </a>
         </div>
       </div>
-    </motion.div>
+    </div>
 
     ///////////////OLD CARD//////////
 
